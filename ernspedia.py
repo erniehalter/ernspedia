@@ -17,6 +17,22 @@ from booking_cars import search_cars
 
 # Constants & Setup
 st.set_page_config(page_title="Ernspedia", page_icon="✈️", layout="wide")
+
+# Password gate
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("✈️ Ernspedia")
+    pw = st.text_input("Password", type="password")
+    if st.button("Enter"):
+        if pw == st.secrets.get("APP_PASSWORD", ""):
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("Incorrect password.")
+    st.stop()
+
 st.title("✈️ Ernspedia: Tournament Flight Search")
 
 SHORTCUTS = {
