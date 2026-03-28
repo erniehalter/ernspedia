@@ -754,7 +754,7 @@ if st.session_state.leg_raw_results:
 
         event = st.dataframe(
             view_df,
-            use_container_width=False,
+            use_container_width=True,
             column_config=col_config,
             on_select="rerun",
             selection_mode="multi-row"
