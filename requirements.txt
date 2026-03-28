@@ -1,0 +1,5 @@
+streamlit>=1.28.0
+pandas>=2.0.0
+flights>=0.7.0
+requests>=2.31.0
+curl_cffi>=0.7.0b4

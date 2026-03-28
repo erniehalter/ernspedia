@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.streamlit/secrets.toml
+=2.31.0
+.claude/
+debug_buckets.py
+debug_raw.py

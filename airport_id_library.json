@@ -1,0 +1,23 @@
+{
+  "PIA": {
+    "id": "eyJsYXRpdHVkZSI6IjQwLjY2NDM5ODE5MzM1OTQiLCJsb25naXR1ZGUiOiItODkuNjkxMzk4NjIwNjA1NSJ9",
+    "name": "Peoria International Airport (PIA)",
+    "iata": "PIA",
+    "lat": 40.6643981933594,
+    "lng": -89.6913986206055
+  },
+  "SNA": {
+    "id": "eyJsYXRpdHVkZSI6IjMzLjY3NTU5ODE0NDUzMTIiLCJsb25naXR1ZGUiOiItMTE3Ljg2Nzk5NjIxNTgyIn0=",
+    "name": "John Wayne Airport (SNA)",
+    "iata": "SNA",
+    "lat": 33.6755981445312,
+    "lng": -117.86799621582
+  },
+  "BOS": {
+    "id": "eyJsYXRpdHVkZSI6IjQyLjM2NjYwMDAzNjYyMTEiLCJsb25naXR1ZGUiOiItNzEuMDE3MzAzNDY2Nzk2OSJ9",
+    "name": "Logan Airport (BOS)",
+    "iata": "BOS",
+    "lat": 42.3666000366211,
+    "lng": -71.0173034667969
+  }
+}

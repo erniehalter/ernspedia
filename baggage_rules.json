@@ -1,0 +1,11 @@
+{
+  "American": {"carry_on": 0, "checked": 0},
+  "Delta": {"carry_on": 0, "checked": 0},
+  "Southwest": {"carry_on": 0, "checked": 35},
+  "United": {"carry_on": 35, "checked": 40},
+  "Alaska": {"carry_on": 0, "checked": 35},
+  "Frontier": {"carry_on": 65, "checked": 60},
+  "Spirit": {"carry_on": 65, "checked": 60},
+  "JetBlue": {"carry_on": 35, "checked": 40},
+  "Default": {"carry_on": 35, "checked": 40}
+}
