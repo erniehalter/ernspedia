@@ -24,13 +24,33 @@ if "authenticated" not in st.session_state:
 
 if not st.session_state.authenticated:
     st.title("✈️ Ernspedia")
-    pw = st.text_input("Password", type="password")
-    if st.button("Enter"):
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        pw = st.text_input("Password", type="password", key="app_password", label_visibility="collapsed")
+    with col2:
+        submitted = st.button("Enter", use_container_width=True)
+
+    if submitted:
         if pw == st.secrets.get("APP_PASSWORD", ""):
             st.session_state.authenticated = True
             st.rerun()
         else:
             st.error("Incorrect password.")
+
+    # Inject JavaScript to make password field 1Password-compatible
+    st.markdown(
+        """
+        <script>
+        setTimeout(() => {
+            const inputs = document.querySelectorAll('input[type="password"]');
+            inputs.forEach(input => {
+                input.setAttribute('autocomplete', 'current-password');
+            });
+        }, 100);
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
     st.stop()
 
 st.title("✈️ Ernspedia: Tournament Flight Search")
