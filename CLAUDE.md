@@ -32,5 +32,6 @@ Opens at http://localhost:8501
 - Rental car results (Booking.com) use RapidAPI — `booking-com18.p.rapidapi.com` — free tier: 530 requests/month. Key stored in `.env` as `RAPIDAPI_KEY`. Pricing: https://rapidapi.com/ntd119/api/booking-com18/pricing
 
 ## Notes
-- venv must be rebuilt if project is moved: `python3 -m venv venv && pip install -r requirements.txt`
+- Safe to move or rename this folder — no hardcoded paths in the project code
+- venv must be rebuilt after moving: `python3 -m venv venv && pip install -r requirements.txt`
 - Supports airport shortcuts like "SOCAL" and "NORCAL" (edit `SHORTCUTS` dict in ernspedia.py)
