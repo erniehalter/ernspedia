@@ -26,9 +26,11 @@ if not st.session_state.authenticated:
     st.title("✈️ Ernspedia")
     col1, col2 = st.columns([3, 1])
     with col1:
-        pw = st.text_input("Password", type="password", key="app_password", label_visibility="collapsed")
+        pw = st.text_input("Password", type="password", key="app_password", label_visibility="collapsed", placeholder="f******e!")
     with col2:
         submitted = st.button("Enter", use_container_width=True)
+
+    st.caption("Hint: Halter catch phrase")
 
     if submitted:
         if pw == st.secrets.get("APP_PASSWORD", ""):
@@ -516,8 +518,6 @@ if search_button:
                             continue
                 # Always surface parse errors — silent drops are the enemy
                 flight_errors = [e for e in parse_errors if "NoneType" not in e and "string index" not in e and "int' object" not in e]
-                if flight_errors:
-                    st.warning(f"⚠️ Leg {leg_idx+1}: {len(flight_errors)} flight(s) failed to parse and were dropped. Check debug for details.")
                 if debug_mode and parse_errors:
                     with st.expander(f"🔬 Leg {leg_idx+1} parse errors ({len(parse_errors)} total, {len(flight_errors)} likely flights)", expanded=True):
                         for err in parse_errors:
